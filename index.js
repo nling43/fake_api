@@ -145,14 +145,14 @@ app.get("/orders", (req, res) => {
 	///orders?id=delivery
 	switch (req.query.role.toLowerCase()) {
 		case "carpenter":
-			res.send(carpenterOrders);
+			res.json(carpenterOrders);
 			break;
 		case "blacksmith":
-			res.send(blacksmithOrders);
+			res.json(blacksmithOrders);
 			break;
 
 		case "delivery":
-			res.send(deliveryOrders);
+			res.json(deliveryOrders);
 			break;
 		default:
 			res.status(404).send("Not Found");
@@ -177,10 +177,10 @@ app.get("/product", (req, res) => {
 app.get("/material", (req, res) => {
 	switch (req.query.role.toLowerCase()) {
 		case "carpenter":
-			res.send(carpenterMaterial);
+			res.json(carpenterMaterial);
 			break;
 		case "blacksmith":
-			res.send(blacksmithMaterial);
+			res.json(blacksmithMaterial);
 			break;
 
 		default:
