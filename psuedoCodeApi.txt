@@ -1,0 +1,66 @@
+
+In the best of worlds we would have diferent endpoint for different roles so we only get the orders that we need for the current user. Option b is to get all the orders but each order have a role so we can sort and filter in the app itself
+
+
+/orders/delivery
+{        
+    ordernumber
+    expected time on site(if u have it)
+    products{
+        either a list of objects or list of ids
+        }
+    address of delivery
+    contact{
+        name,phone or id
+        }
+}
+
+
+/orders/carpenter{    
+    ordernumber
+    products{
+        either a list of objects or list of ids
+        }
+    
+}
+
+
+/orders/blacksmith{    
+    ordernumber
+    products{
+        either a list of objects or list of ids
+        }
+    
+}
+
+
+
+We want to be able to get fresh contact info if its changed since the orders were updated making sure that if the contact info was changed last minute the delivery person would have the correct number when pressing the contact button
+
+/contact/:ordernumber{    
+    name
+    phone
+}
+
+
+
+/products/:id{
+    id 
+    name
+    count(if the same product are grouped into one entity)
+    expected working hours
+
+}
+
+/mateial/blacksmith{
+    id 
+    name
+    unit
+
+}
+/mateial/carpenter{
+    id 
+    name
+    unit
+
+}
