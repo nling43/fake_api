@@ -123,9 +123,9 @@ const deliveryOrders = [
 	},
 ];
 const products = [
-	{ id: "1", name: "chair", expectHours: "5h" },
-	{ id: "2", name: "table", expectHours: "1h" },
-	{ id: "3", name: "tableleg", expectHours: "10h" },
+	{ id: "1", name: "chair", expectHours: 5 },
+	{ id: "2", name: "table", expectHours: 1 },
+	{ id: "3", name: "tableleg", expectHours: 10 },
 ];
 
 const carpenterMaterial = [
