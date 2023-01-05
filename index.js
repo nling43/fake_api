@@ -144,14 +144,14 @@ const blacksmithMaterial = [
 app.get("/orders", (req, res) => {
 	///orders?id=delivery
 	switch (req.query.role.toLowerCase()) {
-		case "carpenter":
+		case "tapetserare":
 			res.json(carpenterOrders);
 			break;
-		case "blacksmith":
+		case "snickare":
 			res.json(blacksmithOrders);
 			break;
 
-		case "delivery":
+		case "leverans":
 			res.json(deliveryOrders);
 			break;
 		default:
@@ -176,10 +176,10 @@ app.get("/product", (req, res) => {
 
 app.get("/material", (req, res) => {
 	switch (req.query.role.toLowerCase()) {
-		case "carpenter":
+		case "tapetserare":
 			res.json(carpenterMaterial);
 			break;
-		case "blacksmith":
+		case "snickare":
 			res.json(blacksmithMaterial);
 			break;
 
