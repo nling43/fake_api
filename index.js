@@ -7,125 +7,170 @@ const PORT = process.env.PORT || 3000;
 
 const carpenterOrders = [
 	{
-		OrderNumber: "carpenter 2022-22-21-11",
-		Products: [
-			{ id: "1", count: 1 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 5 },
-		],
+		OrderNumber: "2022-22-21-11",
+		expectHours: 5,
 	},
 	{
-		OrderNumber: "carpenter 2022-22-22-12",
-		Products: [
-			{ id: "1", count: 1 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 7 },
-		],
+		OrderNumber: "2022-22-22-12",
+		expectHours: 4,
 	},
 	{
-		OrderNumber: "carpenter 2022-22-23-13",
-		Products: [
-			{ id: "1", count: 8 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 1 },
-		],
+		OrderNumber: "2022-22-23-13",
+		expectHours: 9,
 	},
 	{
-		OrderNumber: "carpenter 2022-22-24-14",
-		Products: [
-			{ id: "1", count: 6 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 8 },
-		],
+		OrderNumber: "2022-22-24-14",
+		expectHours: 20,
 	},
 ];
 const blacksmithOrders = [
 	{
-		OrderNumber: "blacksmith 2022-22-21-11",
-		Products: [
-			{ id: "1", count: 1 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 1 },
-		],
+		OrderNumber: "2022-22-21-11",
+		expectHours: 11,
 	},
 	{
-		OrderNumber: "blacksmith 2022-22-22-12",
-		Products: [
-			{ id: "1", count: 1 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 8 },
-		],
+		OrderNumber: "2022-22-22-12",
+		expectHours: 8,
 	},
 	{
-		OrderNumber: "blacksmith 2022-22-23-13",
-		Products: [
-			{ id: "1", count: 6 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 1 },
-		],
+		OrderNumber: "2022-22-23-13",
+		expectHours: 15,
 	},
 	{
-		OrderNumber: "blacksmith 2022-22-24-14",
-		Products: [
-			{ id: "1", count: 3 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 1 },
-		],
+		OrderNumber: "2022-22-24-14",
+		expectHours: 12,
 	},
 ];
 const deliveryOrders = [
 	{
-		OrderNumber: "delivery 2022-22-21-11",
+		OrderNumber: "2022-22-21-11",
 		expectHours: 1,
-		Products: [
-			{ id: "1", count: 1 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 1 },
-		],
 		address: "Glasbruksvagen 32",
 		contact: ["Ingvor Svensson", "070604502"],
 	},
 	{
-		OrderNumber: "delivery 2022-22-22-12",
-		expectHours: 1,
-
-		Products: [
-			{ id: "1", count: 1 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 8 },
-		],
+		OrderNumber: "2022-22-22-12",
+		expectHours: 2,
 		address: "Gustav III:s vag 28",
 		contact: ["Viveka Lindberg", "070604502"],
 	},
 	{
-		OrderNumber: "delivery 2022-22-23-13",
-		expectHours: 1,
-
-		Products: [
-			{ id: "1", count: 6 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 1 },
-		],
+		OrderNumber: "2022-22-23-13",
+		expectHours: 3,
 		address: "Kilbacksgatan 36",
 		contact: ["Hildegard Nilsson", "070604502"],
 	},
 	{
-		OrderNumber: "delivery 2022-22-24-14",
-		expectHours: 1,
-
-		Products: [
-			{ id: "1", count: 3 },
-			{ id: "2", count: 2 },
-			{ id: "3", count: 1 },
-		],
+		OrderNumber: "2022-22-24-14",
+		expectHours: 4,
 		address: "Vargatan 2",
 		contact: ["Jacob Nordström", "070604502"],
 	},
 ];
 const products = [
-	{ id: "1", name: "chair", expectHours: 5 },
-	{ id: "2", name: "table", expectHours: 1 },
-	{ id: "3", name: "tableleg", expectHours: 10 },
+	{
+		count: 10,
+		id: "1192173",
+		name: "Utbildningsbord Hopfällbart",
+		OrderNumber: "2022-22-21-11",
+	},
+	{
+		count: 5,
+		id: "1175536",
+		name: "Kontorsstol Plus 8 hög rygg",
+		OrderNumber: "2022-22-21-11",
+	},
+	{
+		count: 1,
+		id: "1190278",
+		name: "Öppen förvaring 4xA4",
+		OrderNumber: "2022-22-21-11",
+	},
+
+	{
+		count: 2,
+		id: "1192028",
+		name: "Soffbord runt",
+		OrderNumber: "2022-22-22-12",
+	},
+	{
+		count: 3,
+		id: "1192224",
+		name: "Whiteboard Mood Wall glas",
+		OrderNumber: "2022-22-22-12",
+	},
+	{
+		count: 1,
+		id: "1192337",
+		name: "Konferensbord Slim Table Plus",
+		OrderNumber: "2022-22-22-12",
+	},
+
+	{
+		count: 2,
+		id: "1191634",
+		name: "Karmstol Öland",
+		OrderNumber: "2022-22-23-13",
+	},
+	,
+	{
+		count: 1,
+		id: "1191334",
+		name: "Matbord / Konferenssbord runt",
+		OrderNumber: "2022-22-23-13",
+	},
+
+	{
+		count: 10,
+		id: "1192173",
+		name: "Utbildningsbord Hopfällbart",
+		OrderNumber: "2022-22-24-14",
+	},
+	{
+		count: 5,
+		id: "1175536",
+		name: "Kontorsstol Plus 8 hög rygg",
+		OrderNumber: "2022-22-24-14",
+	},
+	{
+		count: 1,
+		id: "1190278",
+		name: "Öppen förvaring 4xA4",
+		OrderNumber: "2022-22-24-14",
+	},
+
+	{
+		count: 2,
+		id: "1192028",
+		name: "Soffbord runt",
+		OrderNumber: "2022-22-24-14",
+	},
+	{
+		count: 3,
+		id: "1192224",
+		name: "Whiteboard Mood Wall glas",
+		OrderNumber: "2022-22-24-14",
+	},
+	{
+		count: 1,
+		id: "1192337",
+		name: "Konferensbord Slim Table Plus",
+		OrderNumber: "2022-22-24-14",
+	},
+
+	{
+		count: 2,
+		id: "1191634",
+		name: "Karmstol Öland",
+		OrderNumber: "2022-22-24-14",
+	},
+	,
+	{
+		count: 1,
+		id: "1191334",
+		name: "Matbord / Konferenssbord runt",
+		OrderNumber: "2022-22-24-14",
+	},
 ];
 
 const carpenterMaterial = [
@@ -166,12 +211,12 @@ app.get("/contact", (req, res) => {
 	res.status(404).send("Not Found");
 });
 
-app.get("/product", (req, res) => {
-	///product?id=333
-	products.forEach((element) => {
-		if (element.id === req.query.id) res.send(element);
+app.get("/products", (req, res) => {
+	const list = [];
+	products.forEach((product) => {
+		if (product.OrderNumber === req.query.id) list.push(product);
 	});
-	res.status(404).send("Not Found");
+	res.send(list);
 });
 
 app.get("/material", (req, res) => {
