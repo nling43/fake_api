@@ -174,16 +174,18 @@ const products = [
 ];
 
 const carpenterMaterial = [
-	{ id: 0, name: "cloth", unit: "m" },
-	{ id: 1, name: "cloth1", unit: "m" },
-	{ id: 2, name: "cloth2", unit: "m" },
-	{ id: 3, name: "cloth3", unit: "m" },
+	{ id: 0, name: "Jerseytyg", unit: "m" },
+	{ id: 1, name: "Muslintyg", unit: "m" },
+	{ id: 2, name: "Flanelltyg", unit: "m" },
+	{ id: 3, name: "Bomullstyg", unit: "m" },
+	{ id: 4, name: "Seratshirttyg", unit: "m" },
+	{ id: 5, name: "Manchestertyg", unit: "m" },
 ];
 const blacksmithMaterial = [
-	{ id: 0, name: "metall", unit: "m" },
-	{ id: 1, name: "metall1", unit: "m" },
-	{ id: 2, name: "metall2", unit: "m" },
-	{ id: 3, name: "metall3", unit: "m" },
+	{ id: 0, name: "Plywood", unit: "m" },
+	{ id: 1, name: "Ask", unit: "m" },
+	{ id: 2, name: "Bok", unit: "m" },
+	{ id: 3, name: "Valnöt", unit: "m" },
 ];
 
 app.get("/orders", (req, res) => {
